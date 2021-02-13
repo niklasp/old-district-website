@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Brown';
+  src: url('/fonts/Brown-Bold.eot');
+  src: url('/fonts/Brown-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/Brown-Bold.woff2') format('woff2'),
+  url('/fonts/Brown-Bold.woff') format('woff'),
+  url('/fonts/Brown-Bold.ttf') format('truetype'),
+  url('/fonts/Brown-Bold.svg#Brown-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brown';
+  src: url('/fonts/Brown-Regular.eot');
+  src: url('/fonts/Brown-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/Brown-Regular.woff2') format('woff2'),
+  url('/fonts/Brown-Regular.woff') format('woff'),
+  url('/fonts/Brown-Regular.ttf') format('truetype'),
+  url('/fonts/Brown-Regular.svg#Brown-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.s(@size){
+  font-size: @size/@rem;
+}
+.br(@value) {
+  border-radius: @value;
+  -moz-border-radius: @value;
+  -webkit-border-radius: @value;
+}
+.box(@value) {
+  box-shadow: @value;
+  -webkit-box-shadow: @value;
+  -moz-box-shadow: @value;
+}
+.t(@value, @value2) {
+  transition: all @value ease-out @value2;
+  -webkit-transition: all @value ease-out @value2;
+}
+
+.dropShadow() {
+  .box(0px 2px 8px #5d443f);
+}
+
+@color1: #000000;
+@color1-2: #8d95aa;
+@color2: #dcc1ba;
+@color2-2: #fdb6aa;
+@color2-3: #fd8467;
+@color2-4: #e9cec7;
+@color2-5: #977f79;
+@color2-6: #e3cec9;
+@color3: #505b78;
+@color5: #73777E;
+@color5-2: #D1D2D2;
+@color5-3: #F2F2F2;
+@color5-4: rgba(242,242,242, 0.8);
+
+@rem: 16;

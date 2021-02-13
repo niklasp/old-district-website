@@ -1,0 +1,5 @@
+dispatch:
+  - url: "thedistrict.world/*"
+    service: default
+  - url: "www.thedistrict.world/*"
+    service: default

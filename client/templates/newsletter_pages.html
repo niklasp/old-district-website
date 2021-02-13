@@ -1,0 +1,31 @@
+<template name="newsletter_pages">
+    <section class="newsletter">
+
+        <div class="inner-images">
+            <img src="/images/bg/CHAINE_01.jpg" class="bgvideo-3">
+        </div>
+        <div class="inner-video">
+            <video class="bgvideo-loop" muted playsinline loop>
+                <source src="/images/videos/CHAINE_03_B.mp4" preload="auto" type="video/mp4">
+            </video>
+            <video class="bgvideo-single" muted playsinline preload="auto" poster="/images/bg/CHAINE_03_poster.jpg">
+                <source src="/images/videos/CHAINE_03_A.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="container has-text-centered">
+            <div class="columns">
+                <div class="column"></div>
+                <div class="column is-three-quarters-tablet">
+                    <q>
+                        Blockchain beyond finance
+                    </q>
+
+                    {{> newsletter placeholder="email"}}
+
+                </div>
+                <div class="column"></div>
+            </div>
+        </div>
+    </section>
+</template>

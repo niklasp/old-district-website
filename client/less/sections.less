@@ -1,0 +1,628 @@
+@import "variables.import.less";
+
+section {
+  z-index: 2;
+  position: relative;
+  color: black;
+  overflow: hidden;
+}
+
+.inner-video, .inner-images {
+  z-index: 0;
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+  video, img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+// hide on desktop
+.inner-images {
+  display: none;
+}
+
+
+
+section.page {
+  z-index: 2;
+  padding: 3em 0;
+  background-color: white;
+  .dropShadow();
+}
+
+
+// MAIN PAGE
+section.hero {
+  position: relative;
+  min-height: 660px;
+  background-image: url('/images/bg/bg.jpg');
+  background-size: 80%;
+  background-position: 50% 140px;
+  background-repeat: no-repeat;
+
+  //text-align: center;
+
+  h1.title {
+    display: inline-block;
+    margin: 100px auto;
+    margin-top: 60px;
+    width: 600px;
+    font-size: 100px;
+    background: rgb(208,0,218);
+    background: linear-gradient(294deg, rgba(208,0,218,1) 0%, rgba(0,212,255,1) 100%);
+    //background: -webkit-linear-gradient(#0024a7, #8100c8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    padding: 0 2em;
+    .s(20em);
+    //font-weight: bold;
+  }
+
+  a.goTorICO {
+    margin-top: 30px;
+    background-color: fade(white, 80%);
+    font-weight: bold;
+
+    border-color: #00e7eb; //#00e7eb
+    color: darken(#00e7eb, 10%);//@color2-2;
+    .box(0 0 10px #00e7eb);
+
+    .t(150ms, 0s);
+
+    &:hover, &:focus {
+      .box(0 0 30px #00e7eb);
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(1);
+    }
+  }
+}
+
+section.countdown {
+  height: 150px;
+  width: 100%;
+  background-color: @color2;
+  .dropShadow();
+  padding: 10px 0;
+  text-align: center;
+
+  span.seperators {
+    font-size: 40px;
+    font-weight: normal;
+    color: @color2-4;
+    text-shadow: -2px -2px 3px white, 2px 2px 3px @color2-4;
+    margin: 0 20px;
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+section.lukso {
+  z-index: 2;
+  position: relative;
+  background-color: #f0f0f0;
+  .dropShadow();
+  background-image: url('/images/bg/LUKSO-bg-right.jpg');
+  background-size: 5px 100%;
+  background-repeat: repeat;
+
+  a {
+    position: relative;
+    display: inline-block;
+    color: @color1 !important;
+
+    .t(100ms, 0s);
+
+    &:focus, &:hover {
+      text-decoration: none;
+      transform: translate(3px, 0);
+    }
+  }
+
+  .left-bg {
+    z-index: -2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    background-image: url('/images/bg/LUKSO-bg-left.jpg');
+    background-size: 5px 100%;
+    background-repeat: repeat;
+  }
+  video.lukso-bg-loop {
+    z-index: -1;
+    position: absolute;
+    width: 82%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    //object-fit: cover;
+    background-image: url('/images/bg/LUKSO_poster.jpg');
+    background-position: 0 100%;
+    background-size: 100% auto;
+  }
+
+  .inner-text {
+    min-height: 360px;
+    padding: 4em 1em;
+  }
+
+  img {
+    margin: -20px 0;
+  }
+}
+
+.middle-chain-divider {
+  z-index: 1;
+  position: relative;
+  height: 320px;
+  background-image: url('/images/bg/CHAINE_02_bg-repeat.png');
+  background-size: 16px 0;
+  background-repeat: repeat;
+
+  .inner-video, .inner-images {
+    left: -5px;
+    width: 101%;
+  }
+}
+
+section.components {
+  z-index: 2;
+  background-color: white;
+  .dropShadow();
+
+  h3 {
+    margin: 0 30px;
+    margin-top: -2.8em;
+    margin-bottom: 4em;
+  }
+
+  .components {
+
+    .column {
+      //height: 520px;
+      overflow: hidden;
+      border: 1px solid @color5-2;
+      margin-bottom: -1px;
+      margin-right: -1px;
+      padding: 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .inner-text {
+        padding: 0  8em;
+      }
+
+
+      video {
+        width: 100%;
+        margin-bottom: -12px;
+      }
+    }
+  }
+
+}
+
+.call-to-action {
+
+  .columns {
+    margin-bottom: 100px;
+  }
+
+  .column {
+    position: relative;
+    min-height: 200px;
+  }
+
+  .inner-text {
+    padding: 4em;
+    padding-top: 0;
+    padding-bottom: 6em;
+  }
+
+  .buttons {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+section.newsletter {
+  z-index: 1;
+  height: 600px;
+  background-color: transparent;
+
+  q {
+    display: inline-block;
+    padding: 2em 0;
+    margin: 0 -3em;
+    font-style: 'Brown', 'Arial', Verdana;
+    font-weight: bold;
+
+    line-height: 19em/@rem;
+    .s(40em);
+  }
+}
+
+footer {
+  z-index: 2;
+  position: relative;
+  background-color: @color1;
+  text-align: center;
+  overflow: hidden;
+  padding: 2.5em 0;
+  padding-bottom: 1.5em;
+  .s(14em);
+
+
+  h3 {
+    display: block;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  a {
+    display: block;
+    .s(14em);
+    color: white;
+
+    &:focus, &:hover {
+      color: black !important;
+      outline: none;
+    }
+    &:visited {
+      color: black;
+    }
+  }
+
+  .is-hidden-desktop {
+    margin-top: 2em;
+  }
+
+  a.logo {
+    display: inline-block;
+    width: 60px;
+    img {
+      width: 60px;
+    }
+  }
+
+  .social-media {
+    margin-bottom: 5px;
+    a {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  small {
+    .s(14em);
+  }
+}
+
+// RESPONSIVE
+
+@media(max-width: 1407px) {
+  section.lukso {
+    video.lukso-bg-loop {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 1215px) {
+
+  section.hero {
+    min-height: 550px;
+  }
+
+  section.lukso {
+
+    video.lukso-bg-loop {
+      width: 130%;
+      max-width: none;
+    }
+  }
+
+  .middle-chain-divider {
+    height: 270px;
+  }
+
+  section.components {
+    .components {
+      .column {
+        //max-height: 430px;
+
+        .inner-text {
+          padding: 4em;
+        }
+      }
+    }
+  }
+
+  .call-to-action {
+
+    .columns {
+      .column {
+        margin-bottom: 30px;
+      }
+    }
+
+    .inner-text {
+      padding: 4em 0.8em;
+    }
+  }
+
+  section.newsletter {
+    height: 400px;
+  }
+}
+
+@media(max-width: 1125px) {
+
+  // TURN of VIDEO, show IMAGES
+  .inner-video {
+    display: none;
+  }
+  .inner-images {
+    display: block;
+  }
+
+  section.hero {
+    min-height: 500px;
+
+    img.lukso-logo {
+      margin-top: 120px;
+    }
+  }
+}
+
+@media(max-width: 932px) {
+
+  section.lukso {
+
+    video.lukso-bg-loop {
+      width: 150%;
+      max-width: none;
+    }
+  }
+}
+
+@media(max-width: 990px) {
+
+  section.hero {
+    min-height: 400px;
+
+    img.lukso-logo {
+      margin-top: 40px;
+    }
+  }
+
+  section.lukso {
+    background-image: none;
+
+    .height-spacer {
+      height: 310px;
+    }
+
+    .left-bg {
+      display: none;
+    }
+
+    .inner-text {
+      padding: 3em;
+    }
+
+    h2 {
+      margin-top: 1em;
+    }
+
+    video, img {
+      &.lukso-bg-loop {
+        width: 130%;
+        height: 360px;
+        max-width: none;
+        top: 0;
+        bottom: auto;
+      }
+    }
+  }
+
+  .middle-chain-divider {
+    height: 250px;
+  }
+
+  section.components {
+    .components {
+      .column {
+        max-height: 360px;
+      }
+    }
+  }
+
+  .call-to-action {
+    .column {
+      margin-left: 3em;
+      margin-right: 3em;
+    }
+  }
+
+  section.newsletter {
+    q {
+      margin: 0;
+    }
+  }
+
+  footer {
+    img.logo {
+      width: 60px;
+    }
+
+    .has-text-left-tablet,
+    .has-text-left-desktop {
+      padding-left: 4em;
+    }
+    .has-text-right-tablet,
+    .has-text-right-desktop {
+      padding-right: 4em;
+    }
+
+    small {
+      .s(10em);
+    }
+  }
+}
+
+@media(max-width: 767px) {
+
+
+  section.hero {
+    min-height: 320px;
+
+    h1 {
+      margin-top: 0;
+    }
+
+    img.lukso-logo {
+      margin-top: 20px;
+    }
+
+    p {
+      .s(18em);
+    }
+
+    a.goTorICO {
+      margin-top: 10px;
+    }
+  }
+
+  section.lukso {
+    background-image: none;
+
+    .height-spacer {
+      height: 220px;
+    }
+
+    .left-bg {
+      display: none;
+    }
+
+    video {
+      &.lukso-bg-loop {
+        width: 120%;
+        height: 280px;
+        max-width: none;
+        top: 0;
+        left: 0;
+        bottom: auto;
+      }
+    }
+  }
+
+  .middle-chain-divider {
+    height: 170px;
+  }
+
+  section.newsletter {
+    height: 340px;
+  }
+
+  section.components {
+    .components {
+      .column {
+        max-height: none;
+      }
+    }
+  }
+
+  .call-to-action {
+    .column {
+      min-height: 270px;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  footer {
+    .has-text-left-tablet,
+    .has-text-left-desktop {
+      padding-left: 0;
+    }
+    .has-text-right-tablet,
+    .has-text-right-desktop {
+      padding-right: 0;
+    }
+  }
+}
+
+
+@media(max-width: 576px) {
+
+  .inner-images, .inner-video {
+    width: 280%;
+    left: -80%;
+  }
+
+  h1.section {
+    .s(45em);
+  }
+
+  section.hero {
+    height: 420px;
+
+    img.lukso-logo {
+      margin-top: 40px;
+    }
+
+    a.goTorICO {
+      margin-top: 10px;
+    }
+  }
+
+  section.lukso {
+    video {
+      &.lukso-bg-loop {
+        width: 210%;
+      }
+    }
+  }
+
+  .call-to-action {
+
+    .column {
+      margin-left: 1em;
+      margin-right: 1em;
+      margin-bottom: 2em !important;
+      min-height: 260px;
+    }
+
+    .inner-text {
+      padding: 2em 2em;
+    }
+  }
+
+  section.newsletter {
+    height: 240px;
+
+    q {
+      padding: 2em 0;
+      margin: 0 -3em;
+
+      //line-height: 19em/@rem;
+      .s(18em);
+    }
+  }
+}

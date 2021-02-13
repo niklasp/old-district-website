@@ -1,0 +1,16 @@
+<template name="layoutPage">
+    {{> navBar}}
+<!--    <nav class="countdownPage">-->
+<!--        <a href="/">-->
+<!--            <img src="/images/lukso_wordmark_white.png" alt="LUKSO logo">-->
+<!--        </a>-->
+<!--    </nav>-->
+
+    <section class="page">
+        <div class="container">
+            {{> Template.dynamic template=main}}
+        </div>
+    </section>
+
+    {{> footer}}
+</template>

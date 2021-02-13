@@ -1,0 +1,47 @@
+@import "variables.import.less";
+
+nav.main {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 10px;
+
+  img {
+    margin-top: 12px;
+    width: 80px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+
+    a {
+      padding: 8px 15px;
+      margin-left: 20px;
+      color: white;
+      .t(0.2s, 0s);
+      //text-shadow: 0px 2px 3px @color5;
+      text-decoration: none !important;
+
+      &:hover, &:focus {
+        //transform: scale(1.2, 1.2);
+        text-shadow: 0px 0px 0px white;
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  nav.main {
+    .menu {
+      display: inline;
+
+      a {
+        margin-left: 0px;
+        .s(10em);
+      }
+    }
+  }
+}

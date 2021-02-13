@@ -1,0 +1,154 @@
+@import "variables.import.less";
+
+nav.countdownPage {
+  text-align: center;
+  padding: 20px 0;
+  background-color: @color2-4;
+  //.dropShadow();
+
+  img {
+    width: 100px;
+  }
+}
+
+section.countdownPage {
+  background-color: @color2;
+  min-height: 500px;
+  max-width: 100%;
+  padding: 3em 0;
+
+
+  h1, h2, p {
+    text-shadow: 0px -1px 2px #ffe3dc, 0px 2px 2px @color2-5;
+    color: #f4d9d0;//e2c7c0;
+  }
+  h1 {
+    margin: 50px 0;
+  }
+
+  img.lukso-logo {
+    //margin-top: 60px;
+    width: 80px;
+  }
+
+  .participate-button {
+    padding: 20px 40px;
+    background-color: rgba(255,255,255,0.5);
+    .br(20px);
+    color: @color1;
+
+    &:hover, &:focus {
+      border-color: #ddf9fb;
+      box-shadow: 0 0 0 0.125em rgba(221, 249, 251, 0.25);
+      text-decoration: none;
+      color: #00e7eb;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  #mc_embed_signup .form {
+    margin: 0;
+    margin-bottom: 60px;
+
+    input {
+      background-color: rgba(255,255,255,0.3);
+      border-color: #ffe3dc; //@color2-5;
+
+      &:hover, &:focus {
+        border-color: #ddf9fb;
+        box-shadow: 0 0 0 0.125em rgba(221, 249, 251, 0.25);
+      }
+    }
+    button {
+      color: @color2-5;
+    }
+  }
+
+  .countdown {
+    //height: 150px;
+    width: 80%;
+    max-width: 100%;
+    background-color: @color2;
+    text-align: center;
+    margin: 60px 0;
+    margin-left: 10%;
+
+    .column {
+      padding: 0;
+    }
+
+    span {
+      display: inline-block;
+      font-size: 40px;
+      font-weight: normal;
+      color: #f4d9d0;//#ffe3dc;
+      text-shadow: -1px -1px 3px #ffe3dc, 2px 2px 3px @color2-5;
+      margin-top: 20px;
+    }
+    span.seperators {
+      margin-top: 50px;
+      font-size: 40px;
+      color: #d7bcb6;
+      text-shadow: -1px -1px 3px @color2-5, 2px 2px 3px #ffe3dc;
+    }
+
+    .numberBox {
+      min-width: 230px;
+      text-align: center;
+
+      span {
+        font-size: 20px;
+        //font-weight: bold;
+      }
+    }
+
+    img {
+      width: 46%;
+    }
+  }
+}
+
+@media(max-width: 1200px) {
+  section.countdownPage {
+    .countdown {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+
+@media(max-width: 990px) {
+  section.countdownPage {
+
+    #mc_embed_signup {
+      .form {
+        margin: 0;
+      }
+    }
+
+    .container {
+      margin: 0 60px;
+    }
+
+    .countdown {
+      //margin: 0 -80px;
+
+      .column {
+        margin-bottom: 20px;
+      }
+
+      img {
+        width: 46%;
+      }
+
+      .numberBox {
+        span {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
