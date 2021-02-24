@@ -27,6 +27,3 @@ import './templates/newsletter_pages.html';
 import './templates/newsletter_pages.js';
 import './templates/imprint.html';
 import './templates/privacy.html';
-
-import './templates/countdownPage.html';
-import './templates/countdownPage.js';

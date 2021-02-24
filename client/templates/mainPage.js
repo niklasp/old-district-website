@@ -1,64 +1,50 @@
 import $ from 'jquery';
 
+let strobeInterval;
+
+function startStrobe(template) {
+    template.$('section.hero').css({'background-image': "url('/images/bg/screens_white.jpg')"});
+    strobeInterval = setInterval(()=>{
+        template.$('section.hero').css({'background-image': "url('/images/bg/screens_white.jpg')"});
+
+        setTimeout(()=> {
+            template.$('section.hero').css({'background-image': "url('/images/bg/screens_off.jpg')"});
+        }, 20);
+    }, 500)
+};
+
+function stopStrobe(template) {
+    template.$('section.hero').css({'background-image': "url('/images/bg/screens_off.jpg')"});
+    clearInterval(strobeInterval);
+}
+
 Template.mainPage.onRendered(function mainOnRendered() {
     let template = this;
 
-    // Play boxes videos only on scroll
-    let started = false;
-    let scrollDelayTimeout;
-    $(window).on('scroll', function (e) {
-        clearTimeout(scrollDelayTimeout);
-        scrollDelayTimeout = setTimeout(function () {
+    template.audio = new Audio('/audio/04_beatloop_techno02_filtered_125BPM.mp3');
+    template.audio.loop = true;
 
-            if (!started && $(window).scrollTop() > 10) { //global.isScrolledIntoView('.call-to-action')
-                started = true;
-
-                // play all videos
-                template.$("video.lukso-bg-loop").each(async (i, video) => {
-                    video.playbackRate = 1;
-                    try {
-                        await video.play();
-
-                        // IF autoplay failed, show images, instead of video
-                    } catch (e) {
-                        template.$(".inner-video").hide();
-                        template.$(".inner-images").show();
-                    }
-                });
-            }
-        });
-    });
-
-    // Play bg videos on start
-    let video1 = template.$(".hero video.bgvideo-single");
-    let video1loop = template.$(".hero video.bgvideo-loop");
-    video1.get(0).play();
-
-    video1.get(0).addEventListener("ended", () => {
-        video1loop.show();
-        video1.hide();
-    });
-    video1loop.hide();
-    video1loop.get(0).play();
-
-
-    // play bg video 2
-    let video2 = template.$(".middle-chain-divider video.bgvideo-single");
-    let video2loop = template.$(".middle-chain-divider video.bgvideo-loop");
-    video2loop.hide();
-    template.timeout2 = setTimeout(function () {
-        video2.get(0).play();
-        video2.get(0).addEventListener("ended", () => {
-            video2loop.show();
-            video2.hide();
-        });
-        video2loop.get(0).play();
-    }, 7.5 * 1000);
+    // let started = false;
+    // let scrollDelayTimeout;
+    // $(window).on('scroll', function (e) {
+    //     clearTimeout(scrollDelayTimeout);
+    //     scrollDelayTimeout = setTimeout(function () {
+    //         console.log('scroll')
+    //
+    //         if (!started && $(window).scrollTop() > 0) {
+    //             started = true;
+    //             console.log('play')
+    //
+    //             template.audio.play();
+    //         }
+    //     }, 100);
+    // });
+    //
+    // template.audio.play();
 
 });
 
 Template.mainPage.onDestroyed(function mainOnDestroyed() {
-    clearTimeout(this.timeout2);
 });
 
 Template.mainPage.helpers({
@@ -67,8 +53,21 @@ Template.mainPage.helpers({
     // },
 });
 
-// Template.mainPage.events({
-//     'click video'(event, instance) {
-//         event.currentTarget.play();
-//     },
-// });
+Template.mainPage.events({
+    'click .play-music, click .hero'(event, instance) {
+        event.preventDefault();
+
+        if(instance.audio.paused) {
+            instance.audio.play();
+            startStrobe(instance);
+        } else {
+            instance.audio.pause();
+            stopStrobe(instance);
+        }
+
+    },
+    'click .stop-music'(event, instance) {
+        event.preventDefault();
+        instance.audio.pause();
+    },
+});
