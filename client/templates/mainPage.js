@@ -1,27 +1,38 @@
 import $ from 'jquery';
 
+
+let audioFile = '04_beatloop_techno02_filtered_125BPM.mp3';
+let whiteScreen = 'screens_white.jpg';
+let blackScreen = 'screens_off.jpg';
+
+
 let strobeInterval;
 
 function startStrobe(template) {
-    template.$('section.hero').css({'background-image': "url('/images/bg/screens_white.jpg')"});
+
+    template.$('.slogan').hide();
+    template.$('.coming-soon').show();
+
+    template.$('section.hero').css({'background-image': "url('/images/bg/"+ whiteScreen +"')"});
+
     strobeInterval = setInterval(()=>{
-        template.$('section.hero').css({'background-image': "url('/images/bg/screens_white.jpg')"});
+        template.$('section.hero').css({'background-image': "url('/images/bg/"+ whiteScreen +"')"});
 
         setTimeout(()=> {
-            template.$('section.hero').css({'background-image': "url('/images/bg/screens_off.jpg')"});
+            template.$('section.hero').css({'background-image': "url('/images/bg/"+ blackScreen +"')"});
         }, 20);
-    }, 500)
-};
+    }, 490)
+}
 
 function stopStrobe(template) {
-    template.$('section.hero').css({'background-image': "url('/images/bg/screens_off.jpg')"});
+    template.$('section.hero').css({'background-image': "url('/images/bg/"+ blackScreen +"')"});
     clearInterval(strobeInterval);
 }
 
 Template.mainPage.onRendered(function mainOnRendered() {
     let template = this;
 
-    template.audio = new Audio('/audio/04_beatloop_techno02_filtered_125BPM.mp3');
+    template.audio = new Audio('/audio/'+ audioFile);
     template.audio.loop = true;
 
     // let started = false;
