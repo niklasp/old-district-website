@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 
-let audioFile = '04_beatloop_techno02_filtered_125BPM.mp3';
+let audioFile = '08_beatloop_techno02_filtered_125bpm_v4.mp3';
 let whiteScreen = 'screens_white.jpg';
 let blackScreen = 'screens_off.jpg';
 
