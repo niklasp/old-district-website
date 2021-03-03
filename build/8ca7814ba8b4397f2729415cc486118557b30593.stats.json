@@ -3,8 +3,8 @@
     "name": "standard-minifier-js",
     "version": "2.6.0"
   },
-  "totalMinifiedBytes": 517684,
-  "totalMinifiedGzipBytes": 158450,
+  "totalMinifiedBytes": 517689,
+  "totalMinifiedGzipBytes": 158452,
   "minifiedBytesByPackage": {
     "packages/meteor.js": 9504,
     "packages/meteor-base.js": 31,
@@ -656,7 +656,7 @@
       {}
     ],
     "app/app.js": [
-      33579,
+      33584,
       {
         "client": {
           "templates": {
@@ -687,7 +687,7 @@
             "privacy.html": 61,
             "template.privacy.js": 10933,
             "cookieNote.js": 249,
-            "mainPage.js": 980,
+            "mainPage.js": 985,
             "newsletter_main.js": 528,
             "newsletter_pages.js": 348
           },
