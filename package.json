@@ -1,5 +1,5 @@
 {
-  "name": "lukso-website",
+  "name": "thedistrict-website",
   "private": true,
   "scripts": {
     "start": "meteor run",
