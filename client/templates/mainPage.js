@@ -21,7 +21,7 @@ function startStrobe(template) {
         setTimeout(()=> {
             template.$('section.hero').css({'background-image': "url('/images/bg/"+ blackScreen +"')"});
         }, 20);
-    }, 490)
+    }, 245) // 490
 }
 
 function stopStrobe(template) {
