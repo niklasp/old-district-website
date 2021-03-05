@@ -13,19 +13,31 @@ function startStrobe(template) {
     template.$('.slogan').hide();
     template.$('.coming-soon').show();
 
-    template.$('section.hero').css({'background-image': "url('/images/bg/"+ whiteScreen +"')"});
-
     strobeInterval = setInterval(()=>{
-        template.$('section.hero').css({'background-image': "url('/images/bg/"+ whiteScreen +"')"});
+        template.$('.slide1').css({'z-index': '0'});
+        template.$('.slide2').css({'z-index': '1'});
 
         setTimeout(()=> {
-            template.$('section.hero').css({'background-image': "url('/images/bg/"+ blackScreen +"')"});
+            template.$('.slide1').css({'z-index': '1'});
+            template.$('.slide2').css({'z-index': '0'});
         }, 20);
-    }, 245) // 490
+    }, 460) // 490
+
+    // template.$('section.hero').css({'background-image': "url('/images/bg/"+ whiteScreen +"')"});
+    //
+    // strobeInterval = setInterval(()=>{
+    //     template.$('section.hero').css({'background-image': "url('/images/bg/"+ whiteScreen +"')"});
+    //
+    //     setTimeout(()=> {
+    //         template.$('section.hero').css({'background-image': "url('/images/bg/"+ blackScreen +"')"});
+    //     }, 20);
+    // }, 245) // 490
 }
 
 function stopStrobe(template) {
-    template.$('section.hero').css({'background-image': "url('/images/bg/"+ blackScreen +"')"});
+    template.$('.slide1').css({'z-index': '1'});
+    template.$('.slide2').css({'z-index': '0'});
+    // template.$('section.hero').css({'background-image': "url('/images/bg/"+ blackScreen +"')"});
     clearInterval(strobeInterval);
 }
 

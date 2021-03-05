@@ -40,16 +40,32 @@ section.page {
 section.hero {
   position: relative;
   min-height: 760px;
-  background-image: url('/images/bg/screens_off.jpg'); //overhead_lights_on.jpg
-  background-size: contain;
-  background-position: 50% 120px;
-  background-repeat: no-repeat;
   cursor: pointer;
+
+  .slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: contain;
+    background-position: 50% 120px;
+    background-repeat: no-repeat;
+
+    &.slide1 {
+      background-image: url('/images/bg/screens_off.jpg'); //overhead_lights_on.jpg
+      z-index: 1;
+    }
+    &.slide2 {
+      background-image: url('/images/bg/screens_white.jpg'); //overhead_lights_on.jpg
+      z-index: 0;
+    }
+  }
 
   .bg-fade {
     position: absolute;
     background-size: 100%;
-    z-index: 0;
+    z-index: 2;
 
     &.left {
       left: 0;
@@ -92,7 +108,7 @@ section.hero {
     margin: 100px auto;
     margin-top: 120px;
     width: 600px;
-    font-size: 16npm run deploy0px;
+    font-size: 160px;
     background: rgb(208,0,218);
     background: linear-gradient(294deg, rgba(208,0,218,1) 0%, rgba(0,212,255,1) 100%);
     //background: -webkit-linear-gradient(#0024a7, #8100c8);
@@ -103,6 +119,7 @@ section.hero {
   }
 
   h2 {
+    z-index: 3;
     position: absolute;
     display: block;
     top: 460px;
@@ -111,6 +128,7 @@ section.hero {
   }
 
   h2.slogan {
+    margin-top: 50px;
     background: rgb(208,0,218);
     background: linear-gradient(294deg, rgba(208,0,218,1) 0%, rgba(0,212,255,1) 100%);
     //background: -webkit-linear-gradient(#0024a7, #8100c8);
@@ -220,7 +238,6 @@ footer {
     .bg-fade {
       position: absolute;
       background-repeat: repeat;
-      z-index: 0;
 
       &.left, &.right {
         width: 200px;
@@ -235,8 +252,12 @@ footer {
       }
     }
 
+    h1.title {
+      font-size: 100px;
+    }
+
     h2 {
-      top: 360px;
+      top: 300px;
     }
 
   }
@@ -304,7 +325,6 @@ footer {
     .bg-fade {
       position: absolute;
       background-repeat: repeat;
-      z-index: 0;
 
       &.left, &.right {
         width: 200px;
@@ -359,7 +379,6 @@ footer {
     .bg-fade {
       position: absolute;
       background-repeat: repeat;
-      z-index: 0;
 
       &.left, &.right {
         width: 100px;
