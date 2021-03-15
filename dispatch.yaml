@@ -3,3 +3,4 @@ dispatch:
     service: default
   - url: "www.thedistrict.world/*"
     service: default
+
