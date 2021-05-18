@@ -67,9 +67,9 @@ a, a:visited {
   text-decoration: none;
 
   &:hover, &:focus {
-    border-color: #00e7eb; //#00e7eb
-    color: #00e7eb !important;//@color2-2;
-    .box(0 0 10px #00e7eb);
+    border-color: #c800eb; //#00e7eb
+    color: #c800eb !important;//@color2-2;
+    .box(0 0 10px #c800eb);
     text-decoration: none;
   }
   &:visited {
@@ -131,7 +131,7 @@ a, a:visited {
     }
 
     input.email {
-      background-color: rgba(255,255,255,0.8);
+      background-color: white;
       border-color: black;
       font-family: 'Brown', 'Arial', Verdana;
 
@@ -154,13 +154,15 @@ a, a:visited {
       &:hover, &:focus {
         right: 8px;
         outline: none;
+        border: none;
+        box-shadow: none;
       }
       &:active {
         right: 6px;
       }
     }
     .response {
-      background-color: rgba(255,255,255,0.8);
+      background-color: white;
       padding: 10px 20px;
       .br(10px;);
       margin-top: 10px;
@@ -187,6 +189,7 @@ a, a:visited {
 
   #mc_embed_signup {
     .form {
+      max-width: 330px;
 
       h2 {
         font-size: 18px;
