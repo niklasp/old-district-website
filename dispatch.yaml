@@ -1,4 +1,8 @@
 dispatch:
+  - url: "thedistrict.club/*"
+    service: default
+  - url: "www.thedistrict.club/*"
+    service: default
   - url: "thedistrict.world/*"
     service: default
   - url: "www.thedistrict.world/*"
