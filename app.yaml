@@ -13,7 +13,7 @@
 #
 # [START runtime]
 service: staging
-runtime: nodejs16
+runtime: nodejs
 handlers:
   - url: /fonts
     static_dir: build/fonts
