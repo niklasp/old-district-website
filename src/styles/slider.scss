@@ -1,0 +1,27 @@
+.slider {
+  width: 100vw;
+
+  img {
+    width: 100vw;
+    height: auto;
+  }
+
+  .swiper-pagination-bullet {
+    background: var(--color-white);
+    opacity: 1;
+    width: 8px;
+    margin: 8px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--color-primary);
+  }
+
+  @include media-breakpoint-up(md) {
+    .swiper-pagination-bullet {
+      width: 14px;
+      height: 14px;
+      margin: 12px !important;
+    }
+  }
+}

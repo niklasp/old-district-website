@@ -1,0 +1,93 @@
+@import 'variables';
+@import "~bootstrap/scss/bootstrap";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/utilities";
+
+@import "~hamburgers/_sass/hamburgers/hamburgers.scss";
+
+@import "./abovethefold.scss";
+
+@import "./typo.scss";
+@import "./page.scss";
+@import "./slider.scss";
+
+@import "./menu.scss";
+@import "./mouse.scss";
+
+@import "./intro.scss";
+@import "./about.scss";
+@import "./roadmap.scss";
+@import "./blog.scss";
+@import "./footer.scss";
+
+@import "./news.scss";
+
+@import "./demo.scss";
+
+
+/* space-grotesk-regular - latin */
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/space-grotesk-v10-latin-regular.eot"); /* IE9 Compat Modes */
+  src:
+    local(""),
+    url("../fonts/space-grotesk-v10-latin-regular-webfont.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/space-grotesk-v10-latin-regular-webfont.woff") format("woff"), /* Modern Browsers */
+}
+
+@font-face {
+  font-family: "Turret Road";
+  font-weight: normal;
+  font-style: normal;
+  src:
+    local(""),
+    url("../fonts/turretroad-regular-webfont.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/turretroad-regular-webfont.woff") format("woff"), /* Modern Browsers */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  cursor: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.6791 1.88666L4.0485 6.59434H9.05464C9.55631 6.59434 9.96219 7.00258 9.96219 7.50277V12.227L14.6791 1.88666ZM9.02107 14.2901L9.02345 14.2849C9.02265 14.2866 9.02186 14.2883 9.02107 14.2901ZM9.26219 14.4944H8.56219V7.99434H1.71911C0.73887 7.99434 0.453774 6.65439 1.35124 6.25766L15.295 0.0828343C16.0593 -0.260725 16.8384 0.527559 16.4914 1.28709L10.2962 14.868C9.89456 15.7601 8.56219 15.4706 8.56219 14.4944H9.26219Z' fill='%2302FF1B'/%3E%3C/svg%3E") 20 0, pointer;
+}
+
+a,
+button,
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: url("data:image/svg+xml,%3Csvg width='20' height='20' style='transform:rotateY(180deg);' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.6791 1.88666L4.0485 6.59434H9.05464C9.55631 6.59434 9.96219 7.00258 9.96219 7.50277V12.227L14.6791 1.88666ZM9.02107 14.2901L9.02345 14.2849C9.02265 14.2866 9.02186 14.2883 9.02107 14.2901ZM9.26219 14.4944H8.56219V7.99434H1.71911C0.73887 7.99434 0.453774 6.65439 1.35124 6.25766L15.295 0.0828343C16.0593 -0.260725 16.8384 0.527559 16.4914 1.28709L10.2962 14.868C9.89456 15.7601 8.56219 15.4706 8.56219 14.4944H9.26219Z' fill='%2302FF1B'/%3E%3C/svg%3E") 0 0, pointer !important;
+}
+
+
+footer {
+  cursor: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.6791 1.88666L4.0485 6.59434H9.05464C9.55631 6.59434 9.96219 7.00258 9.96219 7.50277V12.227L14.6791 1.88666ZM9.02107 14.2901L9.02345 14.2849C9.02265 14.2866 9.02186 14.2883 9.02107 14.2901ZM9.26219 14.4944H8.56219V7.99434H1.71911C0.73887 7.99434 0.453774 6.65439 1.35124 6.25766L15.295 0.0828343C16.0593 -0.260725 16.8384 0.527559 16.4914 1.28709L10.2962 14.868C9.89456 15.7601 8.56219 15.4706 8.56219 14.4944H9.26219Z' fill='%23641FFF'/%3E%3C/svg%3E") 20 0, pointer;
+
+  a,
+  button {
+    cursor: url("data:image/svg+xml,%3Csvg width='20' height='20' style='transform:rotateY(180deg);' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.6791 1.88666L4.0485 6.59434H9.05464C9.55631 6.59434 9.96219 7.00258 9.96219 7.50277V12.227L14.6791 1.88666ZM9.02107 14.2901L9.02345 14.2849C9.02265 14.2866 9.02186 14.2883 9.02107 14.2901ZM9.26219 14.4944H8.56219V7.99434H1.71911C0.73887 7.99434 0.453774 6.65439 1.35124 6.25766L15.295 0.0828343C16.0593 -0.260725 16.8384 0.527559 16.4914 1.28709L10.2962 14.868C9.89456 15.7601 8.56219 15.4706 8.56219 14.4944H9.26219Z' fill='%23641FFF'/%3E%3C/svg%3E") 0 0, pointer !important;
+  }
+}
+
+.lil-gui,
+.dg.ac {
+   z-index: 9000 !important;
+}

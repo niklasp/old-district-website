@@ -1,0 +1,14 @@
+.section-about {
+  h2 {
+    padding-top: 20px;
+    padding-bottom: 14px;
+    margin: 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    h2 {
+      padding-top: 21px;
+      padding-bottom: 35px;
+    }
+  }
+}

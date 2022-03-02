@@ -1,0 +1,104 @@
+section#blog {
+  flex-direction: column;
+}
+
+.more-medium {
+  padding: 20vh 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+.post {
+  text-align: left;
+  margin-bottom: 40px;
+
+  .has-fog {
+    padding: 0;
+  }
+
+  .description {
+    margin: 20px 0;
+  }
+
+  img {
+    max-width: 100%;
+    width: 1024px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .categories {
+    text-transform: uppercase;
+    color: var(--color-primary);
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  hr {
+    opacity: 1;
+    background-color: #fff;
+    box-shadow: 0 0 5px #fff;
+    margin: 0px;
+  }
+
+  .more {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 13px;
+    letter-spacing: 0.2px;
+    text-align: left;
+
+    a {
+      color: #fff;
+      padding-bottom: 2px;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .post {
+    h4 {
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: 0px;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      margin: 37px 0;
+    }
+
+    img {
+      margin-bottom: 20px;
+    }
+
+    .categories {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 2px;
+      padding-top: 41px;
+      padding-bottom: 21px;
+      min-height: 110px;
+    }
+
+    .more {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.1px;
+    }
+  }
+}
+
+.post-date {
+  margin-bottom: 6px;
+}

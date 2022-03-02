@@ -1,0 +1,55 @@
+:root {
+  --color-black: #000;
+  --color-primary: #02FF1B;
+  --color-secondary: #641FFF;
+  --color-dark-gray: #707070;
+  --color-white: #fff;
+  --color-text: #fff;
+  --color-bg: #000;
+  --color-shadow: #eee;
+}
+
+$grid-gutter-width: 48px;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 608px,
+  lg: 658px,
+  xl: 980px,
+  xxl: 1398px,
+);
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 320px,
+  // Medium screen / tablet
+  md: 400px,
+  // Large screen / desktop
+  lg: 768px,
+  // Extra large screen / wide desktop
+  xl: 1100px,
+  // Extra extra large screen / wide desktop
+  xxl: 1750px,
+);
+
+$hamburger-padding-x           : 15px;
+$hamburger-padding-y           : 15px;
+$hamburger-layer-width         : 20px;
+$hamburger-layer-height        : 1px;
+$hamburger-layer-spacing       : 5px;
+$hamburger-layer-color         : #fff;
+$hamburger-layer-border-radius : 0px;
+$hamburger-hover-opacity       : 0.7;
+$hamburger-active-layer-color  : #fff;
+$hamburger-active-hover-opacity: 0.8;
+
+$hamburger-hover-use-filter   : false;
+$hamburger-hover-filter       : opacity(50%);
+$hamburger-active-hover-filter: none;
+
+$hamburger-types: (
+  spring,
+  spring-r,
+);

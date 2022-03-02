@@ -1,0 +1,15 @@
+#mousebg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  filter: blur(40px);
+  display: none;
+}
+#r2,
+#r3,
+#r4,
+#r5,
+#r6 {
+  display: none;
+}

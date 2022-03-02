@@ -1,0 +1,67 @@
+body {
+  background: #000;
+}
+
+#threejs-container {
+  width: 100vw;
+  height: 100vh;
+  position: static;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#loader {
+  z-index: 3000;
+  position: absolute;
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  transition: transform 1.5s;
+  align-items: center;
+  transform: translate3d(0, -100%, 0);
+
+  &.hidden {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  img {
+    max-width: 200px;
+    height: auto;
+  }
+
+  .main-logo {
+    font-size: 6vh;
+    line-height: 5.1vh;
+    text-transform: uppercase;
+    animation: logoanimation 6s infinite;
+
+    span {
+      display: block;
+
+      &.glow {
+        font-weight: bold;
+        text-shadow: 0 0 10px #fff;
+      }
+    }
+  }
+}
+
+@keyframes logoanimation {
+  0% {
+    transform: rotateY(0deg);
+    text-shadow: 0 0 30px var(--color-primary), 0 0 15px var(--color-primary);
+  }
+  50% {
+    transform: rotateY(360deg);
+    text-shadow: 0 0 30px var(--color-secondary), 0 0 15px var(--color-secondary);
+  }
+  100% {
+    transform: rotateY(0deg);
+    text-shadow: 0 0 30px var(--color-primary), 0 0 15px var(--color-primary);
+  }
+}

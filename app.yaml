@@ -47,4 +47,40 @@ automatic_scaling:
   max_instances: 200
   min_pending_latency: 30ms  # default value
   max_pending_latency: automatic
+
+service: staging
+runtime: nodejs16
+handlers:
+  - url: /fonts
+    static_dir: build/fonts
+  - url: /images
+    static_dir: build/images
+  - url: /assets
+    static_dir: build/assets
+  - url: /audio
+    static_dir: build/audio
+  - url: /sockjs
+    static_dir: build/sockjs
+  - url: /ads.txt
+    static_files: build/ads.txt
+    upload: build/ads.txt
+  - url: /(.*\.(js|json|css))
+    static_files: build/\1
+    upload: build/.*\.(js|json|css)
+  - url: /
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /index\.html
+    static_files: build/index.html
+    upload: build/index.html
+  - url: /(.*)
+    static_files: build/index.html
+    upload: build/index.html
+instance_class: F1
+automatic_scaling:
+  target_cpu_utilization: 0.85
+  min_instances: 1
+  max_instances: 200
+  min_pending_latency: 30ms  # default value
+  max_pending_latency: automatic
 # [END runtime]
