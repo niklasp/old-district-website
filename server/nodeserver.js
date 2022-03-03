@@ -6,7 +6,9 @@ const path = require('path');
 const app = express();
 
 // Setup view engine
-app.use(express.static(path.resolve(path.join(__dirname, '../build'))));
+app.set('view engine', 'html');
+
+app.use(express.static(path.resolve(path.join(__dirname, '/build'))));
 
 app.get('/', (req, res) => {
   res.render('index');

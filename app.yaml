@@ -14,6 +14,7 @@
 # [START runtime]
 service: staging
 runtime: nodejs16
+env: flex
 handlers:
   - url: /fonts
     static_dir: build/fonts
