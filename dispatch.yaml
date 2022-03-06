@@ -7,4 +7,6 @@ dispatch:
     service: default
   - url: "www.thedistrict.world/*"
     service: default
+  - url: "https://staging-dot-thedistrict-website.nw.r.appspot.com/*"
+    service: staging
 
