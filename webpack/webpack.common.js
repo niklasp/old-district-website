@@ -65,7 +65,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(woff|woff2|png|mp4|webm|jpg|jpeg|pdf)(\?.*)?$/,
+        test: /\.(woff|woff2|png|mp4|webm|jpg|jpeg|pdf|webp)(\?.*)?$/,
         type: 'asset/resource',
       },
     ],

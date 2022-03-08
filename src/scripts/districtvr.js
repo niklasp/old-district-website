@@ -3,6 +3,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/lazy';
 
 import '../images/club-entrance.jpg';
 
@@ -69,6 +70,8 @@ export default function DistrictVR() {
     const swiper = new Swiper('.swiper', {
       modules: [ Navigation, Pagination ],
       loop: true,
+      preloadImages: false,
+      lazy: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,

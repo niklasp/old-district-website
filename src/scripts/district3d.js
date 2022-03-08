@@ -217,8 +217,6 @@ export default class Sketch {
     this.addComposer();
     this.render();
     this.resize();
-
-    console.log( 'xxx', this.appParams.isAppleDevice );
   }
 
   setState( newState ) {
