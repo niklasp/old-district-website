@@ -1,5 +1,10 @@
 section#blog {
   flex-direction: column;
+  padding-bottom: 30vh;
+}
+
+.medium-posts {
+  // margin-top: 20vh;
 }
 
 .more-medium {
@@ -11,12 +16,16 @@ section#blog {
   a {
     color: #fff;
     text-transform: uppercase;
+
+    &::before {
+      background: #fff;
+    }
   }
 }
 
 .post {
   text-align: left;
-  margin-bottom: 40px;
+  margin-bottom: 90px;
 
   .has-fog {
     padding: 0;
@@ -58,6 +67,10 @@ section#blog {
     a {
       color: #fff;
       padding-bottom: 2px;
+
+      &::before {
+        background: #fff;
+      }
     }
   }
 }

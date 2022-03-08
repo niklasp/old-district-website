@@ -1,6 +1,5 @@
 uniform vec2 u_resolution;  // Canvas size (width,height)
 uniform vec2 u_mouse;       // mouse position in screen pixels
-uniform vec2 u_mouseSpeed;
 uniform float u_time;       // Time in seconds since load
 uniform sampler2D u_image;
 uniform sampler2D tAudioData;

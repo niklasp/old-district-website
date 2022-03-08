@@ -9,9 +9,9 @@ if (process.env.NODE_ENV === 'development') {
 document.addEventListener(
   'DOMContentLoaded',
   () => {
-    // new Sketch({
-    //   dom: document.getElementById( 'threejs-container' )
-    // });
+    new Sketch({
+      dom: document.getElementById( 'threejs-container' )
+    });
   },
   false
 );

@@ -25,10 +25,10 @@ module.exports = {
       template: Path.resolve(__dirname, '../src/index.html'),
       filename: 'index.html',
     }),
-    // new HtmlWebpackPlugin({
-    //   template: Path.resolve(__dirname, '../src/newsroom.html'),
-    //   filename: 'newsroom.html',
-    // }),
+    new HtmlWebpackPlugin({
+      template: Path.resolve(__dirname, '../src/newsroom.html'),
+      filename: 'newsroom.html',
+    }),
   ],
   resolve: {
     alias: {
@@ -54,6 +54,15 @@ module.exports = {
             name: '[path][name].[ext]',
           },
         },
+      },
+      {
+        include: [
+          Path.resolve(__dirname, '../src/favicon'),
+        ],
+        type: 'asset/resource',
+        generator: {
+          filename: '[hash][ext][query]'
+        }
       },
       {
         test: /\.(woff|woff2|png|mp4|webm|jpg|jpeg|pdf)(\?.*)?$/,

@@ -1,3 +1,8 @@
+.f-in {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
 nav {
   background: transparent;
   color: var(--color-text);
@@ -21,6 +26,7 @@ nav {
     .nav-link {
       color: var(--color-white);
 
+      &:visited,
       &:hover {
         color: var(--color-secondary);
       }
@@ -74,7 +80,7 @@ button.hamburger {
 .mobile-menu {
   position: fixed !important;
   background: #000;
-  top: -100%;
+  top: -100vh;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -91,10 +97,16 @@ button.hamburger {
 
   nav {
     height: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
+
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
 
     li {
       list-style: none;
@@ -112,25 +124,43 @@ button.hamburger {
 
 .top-right-button {
   z-index: 220;
-  padding: 4.5px 11px;
-  position: absolute;
+  position: fixed;
   right: 20px;
   top: 22px;
   background: transparent;
   border-radius: 30px;
   border: 1px solid var(--color-white);
-  transition: border 0.5s;
+  transition: border 0.5s color 0.5s;
+  padding: 3px 4px;
 
   &:hover {
     border-color: var(--color-secondary);
+
+    a {
+      color: var(--color-secondary) !important;
+    }
   }
 
-  a:hover {
-    color: var(--color-secondary);
+  a {
+    padding: 3px 4px;
+    font-size: 12px;
+  }
+
+  a:visited {
+    color: #ffffff;
   }
 
   a::before {
     height: 0;
+  }
+
+  @include media-breakpoint-up( xl ) {
+    padding: 4.5px 11px;
+
+    a {
+      padding: 4.5px 11px;
+      font-size: 15px;
+    }
   }
 }
 

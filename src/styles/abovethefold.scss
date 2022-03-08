@@ -4,7 +4,7 @@ body {
 
 #threejs-container {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: static;
   top: 0;
   left: 0;
@@ -18,15 +18,19 @@ body {
   position: absolute;
   background: #000;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
-  transition: transform 1.5s;
+  transition: transform 2.5s;
   align-items: center;
-  transform: translate3d(0, -100%, 0);
 
   &.hidden {
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -150%, 0);
+  }
+
+  video {
+    width: 230px;
+    height: auto;
   }
 
   img {
@@ -34,7 +38,10 @@ body {
     height: auto;
   }
 
-  .main-logo {
+  h1.main-logo {
+    display: none;
+    font-family: Turret Road, sans-serif;;
+    text-align: center;
     font-size: 6vh;
     line-height: 5.1vh;
     text-transform: uppercase;
@@ -44,6 +51,7 @@ body {
       display: block;
 
       &.glow {
+        font-family: Space Grotesk, sans-serif;
         font-weight: bold;
         text-shadow: 0 0 10px #fff;
       }

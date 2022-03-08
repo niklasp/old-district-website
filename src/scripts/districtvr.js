@@ -1,17 +1,21 @@
-import { ScrollSpy } from "bootstrap";
+import { ScrollSpy, Modal } from "bootstrap";
+import Swiper, { Navigation, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import '../images/club-entrance.jpg';
 
+
 export default function DistrictVR() {
+  let postContainer = document.querySelector( '.medium-posts' );
   let mediumArticles;
 
   const updateMediumArticles = ( articles ) => {
-    console.log( articles );
-    const domArticles = [ ...document.querySelectorAll( '.medium-posts .post' ) ];
+    const domArticles = [ ...postContainer.querySelectorAll( '.post' ) ];
     articles.items.splice( 2 );
 
-    console.log( domArticles, articles.items );
-
-    [ ...articles.items ].forEach( ( a, idx) => {
+    [ ...articles.items ].forEach( ( a, idx) => {
       updateArticle( domArticles[ idx ], a );
     });
   };
@@ -30,7 +34,6 @@ export default function DistrictVR() {
   }
 
   navButton?.addEventListener( 'click', () => {
-    console.log( 'aaa' );
     navButton.classList.toggle( 'is-active' );
     mobileMenu.classList.toggle( 'open' );
   });
@@ -42,8 +45,6 @@ export default function DistrictVR() {
 
     const dateOptions = {year: 'numeric', month: 'long', day: 'numeric' };
 
-  
-    console.log( article );
     const image = domEl.querySelector('img');
     const title = domEl.querySelector('h4');
     const desc = domEl.querySelector('.description');
@@ -64,15 +65,43 @@ export default function DistrictVR() {
 // preg_match_all($re, $str, $matches, PREG_SET_ORDER, 0);
   };
 
+  const initSwiper = () => {
+    const swiper = new Swiper('.swiper', {
+      modules: [ Navigation, Pagination ],
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      on: {
+        click: function ( e ) {
+          e.slideNext();
+        },
+      },
+    });
+  };
+
   const init = () => {
+    if ( postContainer ) {
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/thedistrictvr')
       .then( resp => resp.json() )
-      .then( articles => updateMediumArticles( articles ) );
+      .then( articles => updateMediumArticles( articles ) )
+      .catch( () => {
+        if ( postContainer.querySelector( '.post-wrap' ) ) {
+          postContainer.querySelector( '.post-wrap' ).innerHTML =
+            '<div class="col text-center" style="color: var(--color-secondary)"><p>Error getting posts from Medium, please try again later or navigate to medium directly with the link below.<p></div>';
+        }
+      });
+    }
 
     new ScrollSpy(document.body, {
       target: '#main-nav',
     });
+
+    initSwiper();
   };
+
+
 
   init();
 }

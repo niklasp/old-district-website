@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The District VR</title>
+</head>
+<body>
+  <video id="bgvid" src="./images/tdvr_teaser_for_web.mp4" autobuffer preload autoplay playsinline muted loop></video>
+  <div id="loader" class="fh">
+    <h1 class="main-logo"><span>The</span><span>District</span><span class="glow">VR</span></h1>
+  </div>
+  <div id="threejs-container"></div>
+  <header>
+    <nav id="main-nav" class="navbar navbar-expand-md justify-content-center">
+      <a class="navbar-brand abs" href="#">
+        <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 147.2 87.5" style="enable-background:new 0 0 147.2 87.5;" xml:space="preserve">
+        <style type="text/css">
+          .fwhite{fill:#FFFFFF;}
+        </style>
+        <g>
+          <path class="fwhite" d="M80.7,64H88c3.5,0,5.4,1.7,5.4,4.8s-2,4.8-5.4,4.8h-7.3V64z M96.5,68.8c0-4.7-3.4-7.6-8.2-7.6H77.6v26.3h3.1
+            v-11h6l5.8,11h3.4l-6.1-11.2C93.7,75.8,96.5,73,96.5,68.8 M50.7,61.2l8.5,26.3H64l8.5-26.3h-3.3l-7.4,23.4h-0.5l-7.3-23.4H50.7z"/>
+        </g>
+        <path class="fwhite" d="M2,33.1h15.5l2.6,3.4v15.2l-2.6,3.4H2V33.1z M0,31.2v25.9h18.4l3.5-4.7V35.8l-3.5-4.7H0z M25.3,57.1h2V31.2h-2
+          V57.1z M36.1,31.2l-5.5,4.7v6.3l3.9,3.3h13.2l2.7,2.3v3.8l-4.3,3.6h-9.3l-4.2-3.6v-2.4h-2v3.3l5.4,4.7h10.8l5.5-4.7v-5.6l-4-3.3
+          H35.2l-2.7-2.3v-4.4l4.3-3.6h9.3l4.3,3.6v2.2h2v-3.1l-5.4-4.7H36.1z M65.1,31.2l-2.6,3.4l-2.6-3.4h-7.5v2h6.5l2.6,3.4v20.5h2V36.5
+          l2.5-3.4h6.7v-2H65.1z M76.5,33.1h14.7l1.2,2.7v2.6l-3.3,4.7H76.5V33.1z M74.5,31.2v25.9h1.9V45.1h9.9l5.2,11.9h2.2l-5.3-11.9h1.6
+          l4.3-6v-3.7l-1.8-4.3H74.5z M97.7,57.1h2V31.2h-2V57.1z M106.8,31.2l-3.5,4.7v16.5l3.5,4.7h15.4l3.2-4.2l-1.6-1.2l-2.6,3.4h-13.5
+          l-2.6-3.4V36.6l2.6-3.4h13.5l2.6,3.4l1.6-1.2l-3.2-4.2H106.8z M139.6,31.2l-2.6,3.4l-2.6-3.4h-7.5v2h6.5l2.6,3.4v20.5h2V36.5
+          l2.6-3.4h6.7v-2H139.6z"/>
+        <path class="fwhite" d="M56.7,0l-2.6,3.4L51.6,0h-7.5v2h6.5l2.6,3.4v20.5h2V5.4L57.7,2h6.7V0H56.7z M82.8,0v11.9H68.2V0h-2v25.9h2v-12
+          h14.6v12h2V0H82.8z M90.6,0L87,4.7v16.5l3.7,4.7h12.5v-2H91.6L89,20.5V14h11.4v-2H89V5.4L91.6,2h11.5V0H90.6z"/>
+        </svg>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="collapsingNavbar">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="#main">MAIN</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#roadmap">ROADMAP</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#blog">BLOG</a>
+              </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item nav-right">
+              <a class="nav-link">Telegram</a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <a class="button primary" href="public/TDVR_presskit.pdf" target="_blank">Download</a>
+            <p class="header-4 text-center has-fog">Press Kit</p>
+          </div>
+          <div class="col-lg-4">
+            <a class="button primary">Download</a>
+            <p class="header-4 text-center has-fog">Product Screen Shots</p>
+          </div>
+          <div class="col-lg-4">
+            <a class="button primary">Download</a>
+            <p class="header-4 text-center has-fog">Logo and Brand Assets</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="intro">
+      <div class="has-fog">
+        <h2 class="header-1">faq</h2>
+        <div class="accordion accordion-flush" id="accordion-faq">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed header-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                When will The District VR be released? 
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordion-faq">
+              <div class="accordion-body body-small">TDVR (Early Access Beta) will be released in 2022.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed header-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                What music will be played in The District VR?
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordion-faq">
+              <div class="accordion-body body-small">In the beginning the music genres most heavily featured will beTechno, Hip Hop and various styles of related club music. Over time though the taste of the community will prevail and there will be multiple kinds of clubs, event spaces and styles of music.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed header-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                What device do I need to join?
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordion-faq">
+              <div class="accordion-body body-small">
+                A VR headset like HTC VIVE, HTC VIVE PRO, HTC VIVE COSMOS, Oculus Rift, Oculus Rift S, Oculus Quest and Quest 2 (with link cable), Valve Index and Microsoft Mixed Reality headsets among others are recommended. If new headsets are released TDVR will be adapted to them as well.
+                <p>
+                  (Even if we advise using VR headsets, a browser integration enables non-VR users to participate in TDVR as well.)
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+              <button class="accordion-button collapsed header-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                How much will The District VR cost?
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordion-faq">
+              <div class="accordion-body body-small">TDVR is a Free To Play Experience. Users will only have to pay for special events, exclusive gaming assets and additional options.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFive">
+              <button class="accordion-button collapsed header-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree">
+                Why blockchain?
+              </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordion-faq">
+              <div class="accordion-body body-small">
+                We believe in a decentralized internet of permissionless blockchains.User accounts and digital assets (gaming assets, skins, NFTs etc.) of TDVR are stored on the LUKSO Blockchain giving users total ownership of their assets.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingSix">
+              <button class="accordion-button collapsed header-4" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
+                Will there be a TDVR Token?
+              </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordion-faq">
+              <div class="accordion-body body-small">
+                Not for now but it`s possible that a token will be integrated at a laterstage.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="social-buttons">
+      <a class="button f-button" href="">discord</a>
+      <a class="button f-button" href="">twitter</a>
+      <a class="button f-button" href="">instagram</a>
+      <a class="button f-button" href="">medium</a>
+      <a class="button f-button" href="">telegram</a>
+    </div>
+    <div class="byline">© 2022 The District. All right reserved. <a href="">Privacy Policy</a><a href="">Terms of Service</a></div>
+  </footer>
+  <video id="video" loop crossOrigin="anonymous" playsinline style="display:none"></video>
+</body>
+</html>
