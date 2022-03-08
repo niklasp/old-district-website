@@ -378,6 +378,11 @@ export default class Sketch {
       if ( typeof that.loadingDiv !== 'undefined' ) {
         that.loadingDiv.classList.add( 'hidden' );
       }
+
+
+      if ( document.body.classList.contains( 'newsroom') ) {
+        document.body.style.position = 'inherit';
+      }
     };
 
     this.loadingManager.onError = function ( url ) {

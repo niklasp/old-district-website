@@ -8,6 +8,14 @@ handlers:
   - url: /
     static_dir: build
 
+  - url: /news/
+    static_files: build/newsroom.html
+    upload: build/newsroom.html
+
+  - url: /(.*)
+    static_files: build/index.html
+    upload: build/index.html
+
 instance_class: F1
 automatic_scaling:
   target_cpu_utilization: 0.85

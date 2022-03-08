@@ -12,6 +12,10 @@ section#intro {
   p {
     margin-bottom: 50px;
   }
+  
+  .container {
+    margin-top: 20vh;
+  }
 }
 
 section#faq {
@@ -41,6 +45,8 @@ section#faq {
   .accordion-button:focus {
     box-shadow: 0 0 0 0.25rem rgba(54, 253, 13, 0);
   }
+
+  padding-bottom: 50px;
 }
 
 @include media-breakpoint-up(xl) {
