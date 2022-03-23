@@ -7,7 +7,12 @@ handlers:
     static_files: build/newsroom.html
     upload: build/newsroom.html
 
-  - url: /(.*)
+  # presentation
+  - url: /presentation/
+    static_files: build/presentation.html
+    upload: build/presentation.html
+
+  - url: /
     static_files: build/index.html
     upload: build/index.html
     secure: always
