@@ -68,6 +68,12 @@ nav {
     filter: blur(60px);
     z-index: -1;
   }
+
+  a {
+    &::before {
+      height: 0;
+    }
+  }
 }
 
 button.hamburger {

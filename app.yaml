@@ -1,14 +1,9 @@
 service: default
 runtime: nodejs16
 handlers:
-  - url: /
-    static_files: build/index.html
-    upload: build/index.html
 
-  - url: /
-    static_dir: build
-
-  - url: /news/
+  # newsroom
+  - url: /newsroom/
     static_files: build/newsroom.html
     upload: build/newsroom.html
 
@@ -17,7 +12,6 @@ handlers:
     upload: build/index.html
     secure: always
     redirect_http_response_code: 301
-    script: auto
 
 instance_class: F1
 automatic_scaling:
