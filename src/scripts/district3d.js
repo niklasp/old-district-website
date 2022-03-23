@@ -212,7 +212,7 @@ export default class Sketch {
     this.setupListeners();
     this.loadModels();
     this.addLights();
-    this.addGUI();
+    // this.addGUI();
     this.addObjects();
     this.addComposer();
     this.render();
