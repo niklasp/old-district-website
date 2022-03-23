@@ -22,7 +22,7 @@ import { TDVRShader } from '../shaders/TDVRShader.js';
 import club from '../models/club/reduce.glb';
 import pot from '../../public/POT.png';
 
-import visuals from '../images/tdvr_teaser_for_web.mp4';
+import visuals from '../images/tdvr_teaser_for_web_1_sm.mp4';
 import logo from '../images/TDVR-Logo-white-glow.png';
 
 export default class Sketch {
@@ -213,7 +213,7 @@ export default class Sketch {
     this.loadModels();
     this.addLights();
     // this.addGUI();
-    this.addObjects();
+    // this.addObjects();
     this.addComposer();
     this.render();
     this.resize();
@@ -699,7 +699,9 @@ export default class Sketch {
         const newScroll = - ( this.faderScroll - window.scrollY) / ( this.faderContainer.getBoundingClientRect().height - cam.getBoundingClientRect().height ) * 3;
 
         items.forEach( (item, idx) => {
-          item.style.opacity = 1. - ( Math.pow( newScroll + 1 - (idx + 1), 4)) * 10;
+          const transY = - ( newScroll + 1 - (idx + 1) ) * 200;
+          item.style.opacity = 1. - ( Math.pow( newScroll + 1 - (idx + 1), 4)) * 3;
+          item.style.transform = `translate3d(-50%, ${transY - 50}%,0)`;
         });
       }
     }
