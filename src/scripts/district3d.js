@@ -599,8 +599,8 @@ export default class Sketch {
     this.dirLight2 = new THREE.DirectionalLight( this.appParams.dirLight2.color, this.appParams.dirLight2.intensity );
     this.dirLight2.position.set( this.appParams.dirLight2.position.x, this.appParams.dirLight2.position.y, this.appParams.dirLight2.position.z );
     this.dirLight2.target.position.set( this.appParams.dirLight2.target.position.x, this.appParams.dirLight2.target.position.y, this.appParams.dirLight2.target.position.z );
-    this.scene.add( this.dirLight2 );
-    this.scene.add( this.dirLight2.target );
+    // this.scene.add( this.dirLight2 );
+    // this.scene.add( this.dirLight2.target );page
 
     this.spotLight1 = new THREE.SpotLight( 0xffffff, 1 );
     this.spotLight1.position.set( this.appParams.spotLight1.position.x, this.appParams.spotLight1.position.y, this.appParams.spotLight1.position.z );

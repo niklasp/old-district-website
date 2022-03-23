@@ -10,6 +10,14 @@ body {
   width: 100%;
 }
 
+.cc-revoke, .cc-window {
+  font-family: inherit !important;
+
+  .cc-link {
+    text-decoration: none;
+    padding: 0;
+  }
+}
 
 #bgvid {
   z-index: -2;
@@ -198,6 +206,7 @@ button {
   .item {
     opacity: 0;
     width: 80%;
+    min-height: 20vh;
     position: absolute;
     top: 50%;
     left: 50%;

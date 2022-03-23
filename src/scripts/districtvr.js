@@ -1,9 +1,11 @@
 import { ScrollSpy, Modal } from "bootstrap";
 import Swiper, { Navigation, Pagination } from 'swiper';
+import CC from 'CookieConsent';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/lazy';
+import 'cookieconsent/build/cookieconsent.min.css';
 
 import '../images/club-entrance.jpg';
 
@@ -102,6 +104,21 @@ export default function DistrictVR() {
     });
 
     initSwiper();
+    
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#000a",
+          "text": "#0f0"
+        },
+        "button": {
+          "background": "transparent",
+          "text": "#0f0",
+          "border": "#0f0"
+        }
+      },
+      "position": "bottom-right"
+    });
   };
 
 
