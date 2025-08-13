@@ -1,8 +1,13 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "build",
-  "installCommand": "npm install",
+  "installCommand": "npm install --ignore-scripts",
   "framework": null,
+  "build": {
+    "env": {
+      "NODE_VERSION": "16.20.2"
+    }
+  },
   "functions": {
     "server.js": {
       "runtime": "nodejs16.x"

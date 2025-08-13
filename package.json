@@ -74,5 +74,9 @@
   },
   "devDependencies": {
     "sass": "^1.90.0"
+  },
+  "optionalDependencies": {},
+  "resolutions": {
+    "node-sass": false
   }
 }
