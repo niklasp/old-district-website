@@ -1,25 +1,21 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "installCommand": "npm install --ignore-scripts",
-  "framework": null,
+  "version": 2,
   "build": {
     "env": {
-      "NODE_VERSION": "16.20.2"
-    }
-  },
-  "functions": {
-    "server.js": {
-      "runtime": "nodejs16.x"
+      "NODE_VERSION": "18.19.0"
     }
   },
   "builds": [
     {
-      "src": "server.js",
-      "use": "@vercel/node",
+      "src": "package.json",
+      "use": "@vercel/static-build",
       "config": {
-        "includeFiles": ["build/**"]
+        "distDir": "build"
       }
+    },
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
